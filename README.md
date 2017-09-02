@@ -6,7 +6,7 @@
 |id|integer|null: false|
 |name|string|null: false unique: true|
 |phone_number|integer|null:false|
-|E-mail|string|null:false,unique: true|
+|email|string|null:false,unique: true|
 |address|string|null:false|
 |introduce|text|
 |todo|text|
@@ -24,7 +24,7 @@ has_many : comments
 |item_id|integer|null:false|
 |transfortation_type|string|null:false|
 |days|integer|null:false|
-|status|integer|nall:false|
+|status|integer|null:false|
 
 
 ### asociation
@@ -33,7 +33,7 @@ belong_to : users
 
 
 ## コメント
-statusカラムはenumを使いましょう！
+statusカラムはenumを使う
 
 
 
@@ -50,26 +50,17 @@ statusカラムはenumを使いましょう！
 belong_to : users
 belong_to : transactions
 has_many : comments
-belong_to : categories
 
 
 
 ## commentsテーブル
 |Column|Type|Opitions|
 |------|----|--------|
-|user_id|string|null: false|
-|item_id|string|null: false|
+|user_id|integer|null: false|
+|item_id|integer|null: false|
 |body|text|
 
 ### association
 belong_to : items
 belong_to : users
 
-## categoriesテーブル
-|Column|Type|Opitions|
-|------|----|--------|
-|name|string|null:false|
-
-
-### association
-has_many :items
