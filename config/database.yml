@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: tomicari_production
-  username: root
+  username: tomicari
   password: <%= ENV['TOMICARI_DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
