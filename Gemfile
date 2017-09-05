@@ -16,7 +16,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -50,3 +49,21 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
+
+gem 'devise'
+gem 'haml-rails'
+gem 'erb2haml'
+
+group :development do
+     gem 'rspec'
+end
+
+group :test do
+     gem 'rspec'
+end
+
+group :production do
+     gem 'unicorn'
+end
+
+
