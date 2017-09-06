@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container
   = render partial: "layouts/header"
   .front_image#front_image
@@ -30,3 +31,27 @@
     %h3.category_name カテゴリー
   / render partial: "layouts/items_list"
   = render partial: "layouts/footer"
+=======
+%header.general_header
+  .header__inner.clearfix
+    .header__inner__logo_container
+      =link_to root_path, class: "logo" do
+        =image_tag "logos/copicari.png", class: "header__inner__logo"
+    = form_tag "/items/search", method: "GET", class: "header__inner__form" do
+      %input.header__inner__form__text_field{name:"keyword", placeholder:"商品検索", type:"text"}
+      %button.header__inner__form__btn{type:"submit"}
+        %i.fa.fa-search
+    .header__inner__links.clearfix
+      %ul.header__inner__links__left
+        %li.header__inner__links__item カテゴリー
+        - if user_signed_in?
+          %li.header__inner__links__item
+            = link_to "フォロー出品者の商品", followers_path
+      %ul.header__inner__links__right
+        - if user_signed_in?
+          = link_to "マイページ", my_pages_path, class: "header__inner__links__item--blue"
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__inner__links__item--red"
+        -else
+          = link_to "ログイン", new_user_session_path, class: "header__inner__links__item--red"
+          = link_to "新規会員登録", new_user_registration_path, class: "header__inner__links__item--blue"
+>>>>>>> origin/master
