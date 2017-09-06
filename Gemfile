@@ -31,11 +31,8 @@ group :development do
   gem 'rubocop', require: false
   gem 'meowcop'
   gem 'bullet'
-<<<<<<< HEAD
   # gem 'better_errors'
   # gem 'binding_of_caller'
-=======
->>>>>>> origin/master
   gem 'brakeman'
   gem 'erb2haml'
 end
