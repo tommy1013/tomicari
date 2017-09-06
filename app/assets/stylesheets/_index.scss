@@ -1,0 +1,155 @@
+a {
+  color           : $default_font_color;
+  text-decoration : none;
+}
+
+.front_image{
+  @include back_ground_image_with_blur("front.png", 390px);
+
+  &__left_box{
+    position      : absolute;
+    top           : 15%;
+    left          : 18%;
+    color         : white;
+    text-shadow   : 1px 1px 3px $default_font_color;
+    text-align    : left;
+
+    & h1{
+      font-size   : 60px;
+      font-weight : 600;
+      line-height : 1.2;
+    }
+    & p{
+      color       : white;
+      font-size   : 18px;
+      line-height : 32px;
+      margin-top  : 16px;
+    }
+
+    &__stores{
+      margin-top  : 16px;
+      &__image{
+        width     : 170px;
+        float     : left;
+        cursor    : pointer;
+        &--right{
+          margin-left : 10px;
+        }
+        &:hover{
+          opacity     : 0.4;
+        }
+      }
+    }
+  }
+
+  &__phone_image{
+    position  : absolute;
+    top       : -40px;
+    right     : 120px;
+    height    : 500px;
+    transform :rotate(10deg)
+  }
+}
+.consept_section{
+  padding          :40px 20px;
+  background-color : white;
+  & h2{
+    font-size   : 26px;
+    font-weight : bold;
+    line-height : 1.2;
+  }
+}
+
+.items_container{
+  width           : 100%;
+  padding         : 40px 0px;
+  padding-bottom  : 40px;
+}
+
+.section_title{
+  font-size       : 28px;
+  font-weight     : bold;
+}
+
+.category_name{
+  padding-top     : 20px;
+  font-size       : 22px;
+  font-weight     : bold;
+  margin-bottom   : 40px;
+}
+
+.item_content{
+  width           : 75%;
+  margin          : 0px auto;
+}
+.item_box{
+  float           : left;
+  background-color: white;
+  width           : 220px;
+  height          : 330px;
+  margin-right    : 2%;
+  margin-top      : 10px;
+  margin-bottom   : 10px;
+  overflow        : hidden;
+  position        : relative;
+  &__image{
+    width         : 220px;
+    height        : 220px;
+    position      : relative;
+    &--sold{ /*売り切れのSoldを表す設定*/
+      background  : $copicari_red;
+      color       : #FFF;
+      font-size   : 26px;
+      font-weight : 600;
+      padding     : 70px 0px 3px;
+      position    : absolute;
+      left        : -85px;
+      top         : -42px;
+      text-align  : center;
+      width       : 200px;
+      transform   : rotate(-45deg);
+    }
+  }
+  &__body{
+    text-align    : left;
+    padding       :10px;
+    &__name_box{
+      height      : 48px;
+      max-height  : 48px;
+      overflow    : hidden;
+      &:after{ /*一覧画面で商品名の末尾をぼかす設定*/
+        display   : block;
+        position  : absolute;
+        content   : "";
+        bottom    : 45px;
+        right     : 10px;
+        width     : 50%;
+        height    : 1.5em;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 72%);
+      }
+      &__name{
+        font-size   : 16px;
+        font-weight : 700;
+        max-height  : 48px;
+      }
+    }
+    &__price{
+      display       : inline-block;
+      font-size     : 20px;
+      font-weight   : 600;
+    }
+    &__tax{
+      font-size     : 10px;
+    }
+    &__like_box{
+      float         : right;
+      line-height   : 30px;
+      &--liked{
+        color       : $copicari_red;
+      }
+      & span{
+        margin-left: 5px;
+      }
+    }
+  }
+}
