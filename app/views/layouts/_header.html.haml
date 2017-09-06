@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-.container
-  = render partial: "layouts/header"
-  .front_image#front_image
-    = image_tag "gradius.png", id: "gradius"
-    #front_image_inner_top
-    / # = image_tag "gradius_bg_3", id: "front_image_inner_top"
-    .front_image__left_box.front_image_item
-      %h1
-        スマホでかんたん
-        %br/
-        フリマアプリ
-      %p
-        コピカリはスマホカメラからすぐに出品できる
-        %br/
-        購入時も安心な独自システムのアプリのダミーです。
-      .front_image__left_box__stores.front_image_item.clearfix
-        = image_tag "app-store.svg", class: "front_image__left_box__stores__image"
-        = image_tag "google-play.svg", class: "front_image__left_box__stores__image front_image__left_box__stores__image--right"
-    = image_tag "front_image.png", class: "front_image__phone_image front_image_item"
-    #front_image_inner_bottom
-  .consept_section
-    %h2.concept_section__text
-      コピカリは、かんたんに売り買いができて、
-      %br/
-      あんしん・あんぜんなお取引ができる
-      %br/
-      フリマアプリっぽいサイトです。
-  .items_container
-    %h2.section_title 新着アイテム
-    %h3.category_name カテゴリー
-  / render partial: "layouts/items_list"
-  = render partial: "layouts/footer"
-=======
 %header.general_header
   .header__inner.clearfix
     .header__inner__logo_container
@@ -54,4 +20,3 @@
         -else
           = link_to "ログイン", new_user_session_path, class: "header__inner__links__item--red"
           = link_to "新規会員登録", new_user_registration_path, class: "header__inner__links__item--blue"
->>>>>>> origin/master
