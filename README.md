@@ -4,12 +4,13 @@
 |Column|Type|Opitions|
 |------|----|--------|
 |id|integer|null: false|
+|nickname|string|null: false|
+|email|string|null: false,unique: true|
 |name|string|null: false unique: true|
-|phone_number|integer|null:false|
-|email|string|null:false,unique: true|
+|postal-code|integer|null: false|
 |address|string|null:false|
-|introduce|text|
-|todo|text|
+|phone_number|integer|null:false|
+|card-infomation|integer|nell:false|
 
 ### Asociation
 has_many : transactions
