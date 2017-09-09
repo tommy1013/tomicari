@@ -175,3 +175,33 @@ footer img{
   float       : left;
   }
 }
+
+#user_expiration_number_1i {
+  margin-top     : 40px;
+  -webkit-appearance: none;
+  background-color  : white;
+  line-height       : 1.5;
+  color             : $registration_form_font_color;
+  border            : 1px solid $registration_form_form_color;
+  border-radius     : 4px;
+  width             : 100%;
+  padding           : 10px 16px 8px 16px;
+  margin-top        : 8px;
+  width           : 43%;
+  display         : inline-block;
+}
+
+#user_expiration_number_2i {
+  margin-top     : 40px;
+  -webkit-appearance: none;
+  background-color  : white;
+  line-height       : 1.5;
+  color             : $registration_form_font_color;
+  border            : 1px solid $registration_form_form_color;
+  border-radius     : 4px;
+  width             : 100%;
+  padding           : 10px 16px 8px 16px;
+  margin-top        : 8px;
+  width           : 43%;
+  display         : inline-block;
+}

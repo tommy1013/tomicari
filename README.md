@@ -7,10 +7,10 @@
 |nickname|string|null: false|
 |email|string|null: false,unique: true|
 |name|string|null: false unique: true|
-|postal-code|integer|null: false|
+|postal_code|integer|null: false|
 |address|string|null:false|
 |phone_number|integer|null:false|
-|card-infomation|integer|nell:false|
+|card_infomation|integer|nell:false|
 
 ### Asociation
 has_many : transactions

@@ -12,10 +12,11 @@
         / %li.header__inner__links__item カテゴリー検索が間に合えば使うクラス
         - if user_signed_in?
           %li.header__inner__links__item
-            = link_to "フォロー出品者の商品", followers_path
+            = link_to "フォロー出品者の商品"
+            / , followers_path
       %ul.header__inner__links__right
         - if user_signed_in?
-          = link_to "マイページ", my_pages_path, class: "header__inner__links__item--blue"
+          / = link_to "マイページ", my_pages_path, class: "header__inner__links__item--blue"
           = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__inner__links__item--red"
         -else
           = link_to "ログイン", new_user_session_path, class: "header__inner__links__item--red"
