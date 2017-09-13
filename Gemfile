@@ -15,6 +15,8 @@ gem 'carrierwave'
 gem 'fog'
 gem 'listen'
 gem 'font-awesome-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'byebug'
@@ -31,8 +33,6 @@ group :development do
   gem 'rubocop', require: false
   gem 'meowcop'
   gem 'bullet'
-  # gem 'better_errors'
-  # gem 'binding_of_caller'
   gem 'brakeman'
   gem 'erb2haml'
 end

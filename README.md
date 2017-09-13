@@ -27,7 +27,6 @@ has_many : comments
 |days|integer|null:false|
 |status|integer|null:false|
 
-
 ### asociation
 has_one : items
 belong_to : users
@@ -37,12 +36,10 @@ belong_to : users
 statusカラムはenumを使う
 
 
-
 ## itemsテーブル
 |Column|Type|Opitions|
 |------|----|--------|
 |name|sritng|null: false unique: true|
-|image|string|null:false|
 |body|text|
 |price|integer|null:false|
 |category_id|integer|null:false|
@@ -51,8 +48,16 @@ statusカラムはenumを使う
 belong_to : users
 belong_to : transactions
 has_many : comments
+has_many : items_image
 
+## items_imageテーブル
+|Column|Type|Opitions|
+|------|----|--------|
+|image|string|null:false|
+|item_id|integer|null:false|
 
+### asociation
+belong_to : items
 
 ## commentsテーブル
 |Column|Type|Opitions|
