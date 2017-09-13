@@ -5,10 +5,10 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.item_images.build
+    @transaction = Transaction.new
   end
 
   def create
-    # binding.pry
     @item = Item.create(create_params)
     4.times { @item.item_images.build }
     redirect_to root_path

@@ -23,7 +23,9 @@ has_many : comments
 |------|----|--------|
 |id|integer|null: false|
 |item_id|integer|null:false|
+|fee_type|string|nuull:false|
 |transfortation_type|string|null:false|
+|area|string|null:false|
 |days|integer|null:false|
 |status|integer|null:false|
 
