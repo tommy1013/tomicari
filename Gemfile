@@ -17,6 +17,7 @@ gem 'listen'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'jp_prefecture'
 
 group :development, :test do
   gem 'byebug'
