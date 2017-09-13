@@ -45,36 +45,42 @@
             .sell_form__inner__container__sub_container
               %p.sell_form__label 配送量の負担
               %i.form__field__must_info 必須
+              =f.select :days, [["---", "---"], ["送料込み(出品者負担)", "送料込み(出品者負担)"], ["着払い", "着払い"]] ,{class: "sell_form__input sell_form__input--select"}
             .sell_form__inner__container__sub_container--has_margin
               %p.sell_form__label 配送の方法
               %i.form__field__must_info 必須
+              =f.select :days, [["---", "---"], ["未定", "未定"], ["らくらくメルカリ便", "らくらくメルカリ便"], ["ゆうメール", "ゆうメール"], ["レターパック", "レターパック"], ["普通郵便(定型・定形外)", "普通郵便(定型・定形外)"], ["クロネコヤマト", "クロネコヤマト"], ["ゆうパック", "ゆうパック"], ["ポスパケット・ゆうパケット", "ポスパケット・ゆうパケット"]] ,{class: "sell_form__input sell_form__input--select"}
             .sell_form__inner__container__sub_container--has_margin
               %p.sell_form__label 発送元の地域
               %i.form__field__must_info 必須
-              = f.collection_select :area, Prefecture.all, :area, :area
+              = f.collection_select :area, JpPrefecture::Prefecture.all, :name, :name, {class: "sell_form__input sell_form__input--select"}
             .sell_form__inner__container__sub_container--has_margin
               %p.sell_form__label 発送までの日数
               %i.form__field__must_info 必須
-        / .sell_form__inner
-        /   .sell_form__inner__container.clearfix
-        /     %p.sell_form__info_head 販売価格(300〜9,999,999)
-        /     .sell_form__inner__container--right
-        /       .sell_form__inner__container--for_price_form.clearfix
-        /         %p.sell_form__label 価格
-        /         %i.form__field__must_info 必須
-        /       .sell_form__inner__container__price_sub_container.clearfix.fs14
-        /         %p.sell_form__inner__container__price_sub_container__head 販売手数料(10%)
-        /         .sell_form__inner__container__price_sub_container__info#commission_box -
-        /       .sell_form__inner__container__price_sub_container.clearfix.fs16.bold
-        /         %p.sell_form__inner__container__price_sub_container__head 販売利益
-        /         .sell_form__inner__container__price_sub_container__info#profit_box -
+              =f.select :days, [["---", "---"], ["1〜2日で配送", "1〜2日で配送"], ["2〜3日で配送", "2〜3日で配送"], ["4〜7日で配送", "4〜7日で配送"]] ,{class: "sell_form__input sell_form__input--select"}
 
-        / .sell_form__inner
-        /   .sell_form__inner__container
-        /     %p.sell_form__notice
-        /       禁止されている出品、行為を必ずご確認ください。
-        /       %br/
-        /       またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
-        /     .sell_form__inner__container__sub_container--has_margin
+        .sell_form__inner
+          .sell_form__inner__container.clearfix
+            %p.sell_form__info_head 販売価格(300〜9,999,999)
+            .sell_form__inner__container--right
+              .sell_form__inner__container--for_price_form.clearfix
+                %p.sell_form__label 価格
+                %i.form__field__must_info 必須
+              .sell_form__inner__container__price_sub_container.clearfix.fs14
+                %p.sell_form__inner__container__price_sub_container__head 販売手数料(10%)
+                .sell_form__inner__container__price_sub_container__info#commission_box -
+              .sell_form__inner__container__price_sub_container.clearfix.fs16.bold
+                %p.sell_form__inner__container__price_sub_container__head 販売利益
+                .sell_form__inner__container__price_sub_container__info#profit_box -
 
-  / = render partial: "layouts/registration_footer"
+        .sell_form__inner
+          .sell_form__inner__container
+            %p.sell_form__notice
+              禁止されている出品、行為を必ずご確認ください。
+              %br/
+              またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+            .sell_form__inner__container__sub_container--has_margin
+              = f.submit "出品する", class: "form__btn form__btn--red"
+              = link_to "もどる", root_path, class: "form__btn form__btn--grey form__btn--small"
+
+  = render partial: "layouts/registration_footer"
