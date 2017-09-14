@@ -59,21 +59,21 @@
       /         %i.form__field__must_info 必須
       /         =f.select :days, [["---", "---"], ["1〜2日で配送", "1〜2日で配送"], ["2〜3日で配送", "2〜3日で配送"], ["4〜7日で配送", "4〜7日で配送"]] ,{class: "sell_form__input sell_form__input--select"}
 
-      / .sell_form__inner
-      / =form_for(@item) do |f|
-      /   .sell_form__inner__container.clearfix
-      /     %p.sell_form__info_head 販売価格(300〜9,999,999)
-      /     .sell_form__inner__container--right
-      /       .sell_form__inner__container--for_price_form.clearfix
-      /         %p.sell_form__label 価格
-      /         %i.form__field__must_info 必須
-      /         = f.text_field :price, placeholder: "例）3000", class: "sell_form__price_form", id: "input_price"
-      /       .sell_form__inner__container__price_sub_container.clearfix.fs14
-      /         %p.sell_form__inner__container__price_sub_container__head 販売手数料(10%)
-      /         .sell_form__inner__container__price_sub_container__info#commission_box -
-      /       .sell_form__inner__container__price_sub_container.clearfix.fs16.bold
-      /         %p.sell_form__inner__container__price_sub_container__head 販売利益
-      /         .sell_form__inner__container__price_sub_container__info#profit_box -
+      .sell_form__inner
+      =form_for(@item) do |f|
+        .sell_form__inner__container.clearfix
+          %p.sell_form__info_head 販売価格(300〜9,999,999)
+          .sell_form__inner__container--right
+            .sell_form__inner__container--for_price_form.clearfix
+              %p.sell_form__label 価格
+              %i.form__field__must_info 必須
+              = f.text_field :price, placeholder: "例）3000", class: "sell_form__price_form", id: "input_price"
+            .sell_form__inner__container__price_sub_container.clearfix.fs14
+              %p.sell_form__inner__container__price_sub_container__head 販売手数料(10%)
+              .sell_form__inner__container__price_sub_container__info#commission_box -
+            .sell_form__inner__container__price_sub_container.clearfix.fs16.bold
+              %p.sell_form__inner__container__price_sub_container__head 販売利益
+              .sell_form__inner__container__price_sub_container__info#profit_box -
 
       .sell_form__inner
         .sell_form__inner__container

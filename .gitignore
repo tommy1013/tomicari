@@ -21,3 +21,4 @@ app/assets/images/gradius_bg_3.png
 app/assets/images/gradius_bg.jpg
 app/assets/images/gradius.png
 app/assets/images/my_page_user_box.jpeg
+config/secrets.yml
