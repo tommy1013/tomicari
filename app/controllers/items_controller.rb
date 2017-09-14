@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @item = Item.create(create_params)
     4.times { @item.item_images.build }
     redirect_to root_path
@@ -16,6 +17,6 @@ class ItemsController < ApplicationController
 
   private
     def create_params
-      params.require(:item).permit(:name, :body, item_images_attributes: [:image]).merge(user_id: current_user.id)
+      params.require(:item).permit(:name, :body, :price, item_images_attributes: [:image]).merge(user_id: current_user.id)
     end
 end
