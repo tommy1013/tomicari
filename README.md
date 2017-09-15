@@ -10,21 +10,21 @@
 |postal_code|integer|null: false|
 |address|string|null:false|
 |phone_number|integer|null:false|
-|card_infomation|integer|nell:false|
+|card_infomation|integer|null:false|
 
 ### Asociation
-has_many : transactions
+has_many : trades
 has_many : comments
 
 
 
-## transactionsテーブル
+## tradesテーブル
 |Column|Type|Opitions|
 |------|----|--------|
 |id|integer|null: false|
 |item_id|integer|null:false|
-|fee_type|string|nuull:false|
-|transfortation_type|string|null:false|
+|fee_type|string|null:false|
+|trade_type|string|null:false|
 |area|string|null:false|
 |days|integer|null:false|
 |status|integer|null:false|
@@ -48,7 +48,7 @@ statusカラムはenumを使う
 
 ### asociation
 belongs_to : users
-belongs_to : transactions
+belongs_to : trades
 has_many : comments
 has_many : items_image
 
