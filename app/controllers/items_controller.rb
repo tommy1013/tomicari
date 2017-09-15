@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   def index
+    @items = Item.all
+    # @item_image = Item_image.all
   end
 
   def new
@@ -16,7 +18,6 @@ class ItemsController < ApplicationController
 
   private
     def item_params
-      binding.pry
       params.require(:item).permit(:name, :body, :price, item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area]).merge(user_id: current_user.id)
     end
 end
