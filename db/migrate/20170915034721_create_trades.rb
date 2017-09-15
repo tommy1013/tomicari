@@ -1,8 +1,8 @@
-class CreateTransactions < ActiveRecord::Migration[5.0]
+class CreateTrades < ActiveRecord::Migration[5.0]
   def change
-    create_table :transactions do |t|
+    create_table :trades do |t|
       t.integer   :item_id, null: false
-      t.string    :transfortation_type, null:false
+      t.string    :trade_type, null:false
       t.integer   :days, null:false
       t.string    :fee_type
       t.string    :area

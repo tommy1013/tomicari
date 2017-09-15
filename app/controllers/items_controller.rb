@@ -3,20 +3,27 @@ class ItemsController < ApplicationController
   end
 
   def new
+    # binding.pry
     @item = Item.new
     @item.item_images.build
-    @transaction = Transaction.new
+    # @trade = Trade.new
+    binding.pry
+    @item.trades.build
   end
 
   def create
-    # binding.pry
-    @item = Item.create(create_params)
+    @item = Item.create(item_params)
+      # binding.pry
+    @transaction = Trande.create(trade_params)
     4.times { @item.item_images.build }
     redirect_to root_path
   end
 
   private
-    def create_params
+    def item_params
       params.require(:item).permit(:name, :body, :price, item_images_attributes: [:image]).merge(user_id: current_user.id)
+    end
+    def trade_params
+      params.require(:trade).permit(:item_id, :trade_type, :days, :fee_type, :area)
     end
 end
