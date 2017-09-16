@@ -1,5 +1,5 @@
 -@items.each do |item|
-  .item_content.clearfix
+  .item_content
     = link_to item_path(item) do
       .item_box
         / - if item.stock_status != "sold"
