@@ -14,10 +14,10 @@ gem 'haml-rails'
 gem 'carrierwave'
 gem 'fog'
 gem 'listen'
-gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jp_prefecture'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug'

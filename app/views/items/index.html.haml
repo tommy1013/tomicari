@@ -29,8 +29,9 @@
       %br/
       フリマアプリっぽいサイトです。
 
-  .items_container
+  .items_container.clearfix
     %h2.section_title 新着アイテム
+    %i.fa.fa-camera
     / %h3.category_name カテゴリー
 
     = render partial: "layouts/items_list"

@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    # binding.pry
+    @item = Item.find(params[:id])
+  end
+
   private
     def item_params
       params.require(:item).permit(:name, :body, :price, item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area]).merge(user_id: current_user.id)
