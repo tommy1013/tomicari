@@ -23,10 +23,15 @@
       position  : relative;
       overflow  : hidden;
       height    : 350px;
+      // width: 350px;
+      // background-size: 50% 50%;
       &__image{
         width     : 100%;
         max-height: 346px;
+        // max-width: 346px;
         overflow: hidden;
+        // background-size: contain;
+        // background-position: center;
       }
     }
     &__bottom__image{
@@ -58,16 +63,34 @@
     &__box{
       padding-top  : 24px;
     }
+    &__sub{
+      width      : 100%;
+    }
     &__price{
       font-size    : 50px;
       font-weight  : 600;
       margin-right : 16px;
-      &__tax{
-        font-size  : 10px;
+      &__head{
+        width      : 30%;
+        display    : inline-block;
+        float      : left;
       }
-      &__delivary_fee{
-        font-size  : 16px;
+      &__center{
+        width      : 40%;
+        display    : inline-block;
+        float      : center;
       }
+      &__bottom{
+        width      : 30%;
+        display    : inline-block;
+        float      : right;
+      }
+        &__tax{
+          font-size  : 10px;
+        }
+        &__delivary_fee{
+          font-size  : 16px;
+        }
     }
   }
 
