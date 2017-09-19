@@ -18,6 +18,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'jp_prefecture'
 gem 'font-awesome-rails'
+gem 'fog'
 
 group :development, :test do
   gem 'byebug'
