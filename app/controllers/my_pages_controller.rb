@@ -2,6 +2,6 @@ class MyPagesController < ApplicationController
   def index
   end
 
-  def show
+  def sell_list
   end
 end
