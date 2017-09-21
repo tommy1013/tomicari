@@ -20,7 +20,6 @@ class ItemsController < ApplicationController
   end
 
   def update
-    # binding.pry
     @item = Item.find(params[:id])
     redirect_to root_path
     # 合計 = (旧情報)updateアクションのfindから持ってきたidのカラムevaluate_price(@item = Item.find(params[:id])) + (新情報)evaluate_paramsのパラムスハッシュの入っているキーevaluate_priceに対応するvalue

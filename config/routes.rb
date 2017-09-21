@@ -11,7 +11,6 @@ Rails.application.routes.draw do
     collection do
       get 'sell_list'
       get 'buy_list'
-      get 'likes'
     end
   end
 end
