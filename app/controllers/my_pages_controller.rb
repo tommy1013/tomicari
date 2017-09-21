@@ -4,4 +4,7 @@ class MyPagesController < ApplicationController
 
   def sell_list
   end
+
+  def buy_list
+  end
 end
