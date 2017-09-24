@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: %i[edit show update]
   def index
     @items = Item.all
   end
@@ -10,26 +11,22 @@ class ItemsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @item = Item.create(item_params)
-
     redirect_to root_path
   end
 
   def edit
-    @item = Item.find(params[:id])
-    3.times{ @item.item_images.build }
+    4.times{ @item.item_images.build }
   end
 
   def show
-    @item = Item.find(params[:id])
+    @user = User.find(@item.user_id)
   end
 
   def update
-    if
-    @item = Item.find(params[:id])
-    # 合計 = (旧情報)updateアクションのfindから持ってきたidのカラムevaluate_price(@item = Item.find(params[:id])) + (新情報)evaluate_paramsのパラムスハッシュの入っているキーevaluate_priceに対応するvalue
-    sum = @item.evaluate_price.to_i +  evaluate_params[:evaluate_price].to_i
-    @item.update(evaluate_price: sum)
+    # binding.pry
+    @item.update(item_edit_params)
     redirect_to root_path
   end
 
@@ -37,8 +34,10 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name, :body, :price, item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area]).merge(user_id: current_user.id, evaluate_price: 0)
     end
-
-    def evaluate_params
-     params.require(:item).permit(:evaluate_price)
+    def item_edit_params
+      params.require(:item).permit(:name, :body, :price, item_attributes: [:item_id], item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area, :item_id, :id]).merge(user_id: current_user.id, evaluate_price: 0)
+    end
+    def set_item
+      @item = Item.find(params[:id])
     end
 end

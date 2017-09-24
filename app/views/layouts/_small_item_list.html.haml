@@ -3,7 +3,7 @@
     %h2 #{title}
   .container__right_inner__item_box__content.clearfix
     - @items.each do |item|
-      = link_to my_page_path(item) do
+      = link_to item_path(item) do
         .item_box
           = image_tag item.item_images[0].image , class: "item_box__image"
 
@@ -13,4 +13,3 @@
           %p.item_box__body__price ¥ #{item.price.to_s(:delimited)}
           = render partial: "layouts/like_box_for_list", locals: {item: item}
           %p.item_box__body__tax   (税 ¥0)
-
