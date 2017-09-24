@@ -3,7 +3,7 @@
     %h2 #{title}
   .container__right_inner__item_box__content.clearfix
     - @items.each do |item|
-      = link_to edit_my_page_path(item) do
+      = link_to my_page_path(item) do
         .item_box
           = image_tag item.item_images[0].image , class: "item_box__image"
 
