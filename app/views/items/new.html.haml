@@ -9,10 +9,12 @@
           .sell_form__inner__container
             %i.form__field__must_info 必須
             %p.sell_form__supplement 最大4枚までアップロードできます。
-          / %p.sell_form__drop_box__supplement クリックしてファイルをアップロード
-          = f.fields_for :item_images do |pf|
-            = pf.file_field :image, class: "sell_form__inner__container__image"
-            = pf.check_box :_destroy
+
+            .sell_form__drop_box
+            %p.sell_form__drop_box__supplement クリックしてファイルをアップロード
+            = f.fields_for :item_images do |pf|
+              / = pf.label :image, "クリックしてファイルをアップロード" do
+              = pf.file_field :image, id: 'item_images'
 
         .sell_form__inner
           .sell_form__inner__container
@@ -27,17 +29,6 @@
               =f.label "商品説明", class: "sell_form__label"
               %i.form__field__must_info 必須
               = f.text_area :body, placeholder: "商品名（必須 商品の説明）", class: "sell_form__input sell_form__item_description"
-
-        / .sell_form__inner
-        /   .sell_form__inner__container.clearfix
-        /     %p.sell_form__info_head 商品の詳細
-        /     .sell_form__inner__containedr--right
-        /       .sell_form__inner__container__sub_container#category_select_box
-        /         %p.sell_form__label カテゴリー
-        /         %i.form__field__must_info 必須
-        /       .sell_form__inner__container__sub_container--has_margin
-        /         %p.sell_form__label 商品の状態
-        /         %i.form__field__must_info 必須
 
         .sell_form__inner
         = f.fields_for :trade do |pp|

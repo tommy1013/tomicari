@@ -57,6 +57,7 @@
     margin-top         : 8px;
     font-size          : 14px;
   }
+
   &__drop_box{
     display            : block;
     border             : 1px dashed $input_form_form_color;
@@ -67,10 +68,11 @@
     font-size          : 14px;
     line-height        : 21px;
     height             : 80px;
+
     &__supplement{
+      top              : -130px;
+      text-align         : center;
       position         : relative;
-      top              : 150px;
-      left             : 180px;
       color            : $sell_form_info_head_color;
     }
   }
@@ -129,6 +131,12 @@
   }
 }
 
+.fileupload {
+  width: 300px;
+  height: 100px;
+  background-color: red;
+}
+
 .fs14{
   font-size            : 14px;
 }
@@ -140,3 +148,8 @@
 .bold{
   font-weight          : bold;
 }
+
+#item_images{
+    display            : none;
+
+   }

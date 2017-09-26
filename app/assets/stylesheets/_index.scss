@@ -5,6 +5,16 @@ a {
 
 .front_image{
   @include back_ground_image_with_blur("front.png", 390px);
+  &__conamibutton{
+    height        : 400px;
+    width         : 100%;
+    color         : white;
+    text-align    : center;
+    background-color: #38AEF0;
+    position      : absolute;
+    z-index       :10;
+    font-size     :230px;
+  }
 
   &__left_box{
     position      : absolute;
@@ -152,4 +162,8 @@ a {
       }
     }
   }
+}
+
+.hidden{
+visibility    :hidden;
 }

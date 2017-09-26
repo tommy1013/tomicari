@@ -6,12 +6,11 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    4.times{ @item.item_images.build }
+    @item.item_images.build
     @item.build_trade
   end
 
   def create
-    # binding.pry
     @item = Item.create(item_params)
     redirect_to root_path
   end

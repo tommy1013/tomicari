@@ -1,26 +1,42 @@
-function konamicommand(func, cmd) {
-  if (!(func instanceof Function)) return;
-  var kc = {};
-  kc.func = func;
-  kc.cmd = (typeof(cmd) == "string" || cmd instanceof String) ? cmd : '|38|38|40|40|37|39|37|39|66|65|';
-  kc.count = 0;
-  kc.input = '|';
-  kc.up = function(event) {
-    event = event ? event : window.event;
-    if (kc.cmd.indexOf('|' + event.keyCode + '|') == -1) {
-      kc.input = '|';
-      return;
+jQuery(function($){
+  // 入力キー配列
+  input_cmd = [];
+  // コナミコマンド配列 [↑, ↑, ↓, ↓, ←, →, ←, →, B, A]
+  konami_cmd = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+  // キー入力後のキーアップイベントで発動条件を監視します
+  $(window).keyup(function(event){
+    // 入力されたキーのコード
+    var keyCode = event.keyCode;
+    // 入力キー配列へ追加
+    input_cmd.push(keyCode);
+
+    // 入力されたキーが正しいか判定
+    if ( input_cmd[input_cmd.length - 1] != konami_cmd[input_cmd.length - 1] ) {
+      // 間違っている場合、入力キー配列をリセット（やり直し）
+      input_cmd = [];
     }
-    kc.input += event.keyCode + '|';
-    if (kc.input.indexOf(kc.cmd) != -1) {
-      kc.func(kc.count);
-      kc.count++;
-      kc.input = '|';
+    // 合っている場合、かつ完全に入力が終了したら処理発動
+    else if ( input_cmd.length == konami_cmd.length ) {
+      // コナミコマンド発動！
+      konami_cmd_action();
+
+      // 処理後、改めて入力キー配列をリセット
+      input_cmd = [];
     }
-  }
-  if (document.attachEvent) {
-    document.attachEvent('onkeyup', kc.up);
-  } else if (document.addEventListener) {
-    document.addEventListener('keyup', kc.up , false);
-  }
+  });
+
+});
+
+function konami_cmd_action() {
+
+  jQuery(function($){
+    $('body').animate({zIndex:1},{
+      duration: 1500,
+      easing: "linear",
+      step: function(now,fx){ $(this).css("transform", "rotate(" + (now*360) + "deg)"); },
+      complete:function(){$("body").css("zIndex", 0);}
+    });
+  });
+  $('.front_image__conamibutton').removeClass('hidden');
 }

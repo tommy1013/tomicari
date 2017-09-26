@@ -2,7 +2,9 @@
   = render partial: "layouts/header"
 
   .front_image#front_image
-    = image_tag "gradius.png", id: "gradius"
+    / = image_tag "gradius.png", id: "gradius"
+    .front_image__conamibutton.hidden
+      push
     #front_image_inner_top
     / # = image_tag "gradius_bg_3", id: "front_image_inner_top"
     .front_image__left_box.front_image_item
