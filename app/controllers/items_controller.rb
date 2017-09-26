@@ -20,11 +20,12 @@ class ItemsController < ApplicationController
   end
 
   def show
+    # binding.pry
     @user = User.find(@item.user_id)
+    # @user = item.user.find(params[:id])
   end
 
   def update
-    # binding.pry
     @item.update(item_edit_params)
     redirect_to root_path
   end
