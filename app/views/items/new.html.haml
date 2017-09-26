@@ -38,11 +38,12 @@
               .sell_form__inner__container__sub_container
                 %p.sell_form__label 配送量の負担
                 %i.form__field__must_info 必須
-                =pp.select :fee_type, [["---", "---"], ["送料込み(出品者負担)", "送料込み(出品者負担)"], ["着払い", "着払い"]], { class: "sell_form__input sell_form__input--select" }
+                / =pp.label :fee_type, class: "item_description"
+                =pp.select :fee_type, [["---", "---"], ["送料込み(出品者負担)", "送料込み(出品者負担)"], ["着払い", "着払い"]]
               .sell_form__inner__container__sub_container--has_margin
                 %p.sell_form__label 配送の方法
                 %i.form__field__must_info 必須
-                =pp.select :trade_type, [["---", "---"], ["未定", "未定"], ["らくらくメルカリ便", "らくらくメルカリ便"], ["ゆうメール", "ゆうメール"], ["レターパック", "レターパック"], ["普通郵便(定型・定形外)", "普通郵便(定型・定形外)"], ["クロネコヤマト", "クロネコヤマト"], ["ゆうパック", "ゆうパック"], ["ポスパケット・ゆうパケット", "ポスパケット・ゆうパケット"]] ,{class: "sell_form__input sell_form__input--select"}
+                =pp.select :trade_type, [["---", "---"], ["未定", "未定"], ["らくらくメルカリ便", "らくらくメルカリ便"], ["ゆうメール", "ゆうメール"], ["レターパック", "レターパック"], ["普通郵便(定型・定形外)", "普通郵便(定型・定形外)"], ["クロネコヤマト", "クロネコヤマト"], ["ゆうパック", "ゆうパック"], ["ポスパケット・ゆうパケット", "ポスパケット・ゆうパケット"]] ,{class: "sell_form__price_form"}
               .sell_form__inner__container__sub_container--has_margin
                 %p.sell_form__label 発送元の地域
                 %i.form__field__must_info 必須
