@@ -130,8 +130,7 @@
     text-decoration    : none;
   }
 }
-
-.fileupload {
+ .fileupload {
   width: 300px;
   height: 100px;
   background-color: red;
@@ -151,5 +150,36 @@
 
 #item_images{
     display            : none;
-
    }
+
+#item_trade_attributes_fee_type{
+  width                : 100%;
+  text-align           : center;
+  height               : 50px;
+  background-color                : white;
+  cursor               : pointer;
+}
+
+#item_trade_attributes_trade_type{
+  width                : 100%;
+  text-align           : center;
+  height               : 50px;
+  background-color                : white;
+  cursor               : pointer;
+}
+
+#item_trade_attributes_area{
+  width                : 100%;
+  text-align           : center;
+  height               : 50px;
+  background-color                : white;
+  cursor               : pointer;
+}
+
+#item_trade_attributes_days{
+  width                : 100%;
+  text-align           : center;
+  height               : 50px;
+  background-color                : white;
+  cursor               : pointer;
+}
