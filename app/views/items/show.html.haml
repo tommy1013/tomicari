@@ -47,9 +47,11 @@
           .item__price__price__bottom
             .item__price__tax   (税 ¥0)
             .item__price__delivery_fee 送料込み
-        - if current_user.id
+
+        - if user_signed_in? && @user.id == current_user.id
           = link_to "編集", edit_item_path , class: "item__purchase_btn"
         - else
           = link_to "購入", root_path, class: "item__purchase_btn"
+
   = render partial: "layouts/footer"
 
