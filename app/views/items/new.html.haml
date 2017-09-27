@@ -14,7 +14,7 @@
             %p.sell_form__drop_box__supplement クリックしてファイルをアップロード
             = f.fields_for :item_images do |pf|
               / = pf.label :image, "クリックしてファイルをアップロード" do
-              = pf.file_field :image, id: 'item_images'
+              = pf.file_field :image, class: 'item_images'
 
         .sell_form__inner
           .sell_form__inner__container

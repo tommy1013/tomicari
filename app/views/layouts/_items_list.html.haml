@@ -1,9 +1,12 @@
--@items.each do |item|
+- @items.each do |item|
   .item_content
     = link_to item_path(item) do
       .item_box
         / - if item.stock_status != "sold"
-        = image_tag item.item_images[0].image , class: "item_box__image"
+        - if item.item_images[0] == nil
+          画像がありません。
+        - else
+          = image_tag item.item_images[0].image , class: "item_box__image"
         / - else
 
         / %span.item_box__image--sold SOLD

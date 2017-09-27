@@ -12,8 +12,6 @@
           / %p.sell_form__drop_box__supplement クリックしてファイルをアップロード
           = f.fields_for :item_images do |pf|
             = pf.file_field :image, class: "sell_form__inner__container__image"
-            = pf.check_box :_destroy
-
         .sell_form__inner
           .sell_form__inner__container
             .sell_form__inner__container__sub_container
