@@ -75,6 +75,13 @@
       position         : relative;
       color            : $sell_form_info_head_color;
     }
+
+    &__supplement_edit{
+      top              : 30px;
+      text-align         : center;
+      position         : relative;
+      color            : $sell_form_info_head_color;
+    }
   }
   &__input{
     @include sell_form_default;
