@@ -3,7 +3,7 @@ class CreateTrades < ActiveRecord::Migration[5.0]
     create_table :trades do |t|
       t.integer   :item_id, null: false
       t.string    :trade_type, null:false
-      t.integer   :days, null:false
+      t.string   :days, null:false
       t.string    :fee_type
       t.string    :area
 
