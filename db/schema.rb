@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170916062325) do
   create_table "trades", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "item_id",    null: false
     t.string   "trade_type", null: false
-    t.integer  "days",       null: false
+    t.string   "days",       null: false
     t.string   "fee_type"
     t.string   "area"
     t.datetime "created_at", null: false
