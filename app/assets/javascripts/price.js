@@ -10,12 +10,12 @@ $(function() {
 
   function kakezan(input){
    var fee = input * 0.1;
-   return fee
+   return Math.round(fee)
   }
 
   function kakezan2(input){
    var profit = input * 0.9;
-   return profit
+   return Math.round(profit)
   }
 
 });
