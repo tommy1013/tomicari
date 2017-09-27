@@ -9,9 +9,12 @@
           .sell_form__inner__container
             %i.form__field__must_info 必須
             %p.sell_form__supplement 最大4枚までアップロードできます。
-          / %p.sell_form__drop_box__supplement クリックしてファイルをアップロード
-          = f.fields_for :item_images do |pf|
-            = pf.file_field :image, class: "sell_form__inner__container__image"
+
+            .sell_form__drop_box
+              %p.sell_form__drop_box__supplement_edit クリックしてファイルをアップロード
+            = f.fields_for :item_images do |pf|
+              = pf.file_field :image, class: 'item_images'
+
         .sell_form__inner
           .sell_form__inner__container
             .sell_form__inner__container__sub_container
