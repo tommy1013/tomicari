@@ -21,8 +21,7 @@
         %table.item__data_table
           %tr
             %th 出品者
-            %td
-              = link_to @item.user.name, user_path(@item.user)
+            %td #{@item.user.family_name} #{@item.user.name}
           %tr
             %th 配送料の負担
             %td #{@item.trade.fee_type}
@@ -54,4 +53,5 @@
           = link_to "購入", root_path, class: "item__purchase_btn"
 
   = render partial: "layouts/footer"
+
 

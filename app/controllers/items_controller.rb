@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    # @item.item_images.build
     @item.build_trade
      4.times{ @item.item_images.build }
   end

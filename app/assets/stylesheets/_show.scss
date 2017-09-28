@@ -45,7 +45,7 @@
 
   &__data_table{
     width      : 45%;
-    padding    : 8px;
+    padding    : 12px;
     margin-left: 20px;
     float      : left;
     text-align : left;
@@ -53,10 +53,10 @@
     border     : 1px solid $item_data_table_grey;
     & th{
       background-color : $item_data_table_grey;
-      padding          : 8px;
+      padding          : 30px;
     }
     & td{
-      padding  : 8px;
+      padding  : 12px;
     }
   }
 
