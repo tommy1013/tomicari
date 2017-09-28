@@ -10,10 +10,6 @@
     .header__inner__links.clearfix
       %ul.header__inner__links__left
         / %li.header__inner__links__item カテゴリー検索が間に合えば使うクラス
-        - if user_signed_in?
-          %li.header__inner__links__item
-            = link_to "フォロー出品者の商品"
-            / , followers_path
       %ul.header__inner__links__right
         - if user_signed_in?
           = link_to "マイページ", my_pages_path, class: "header__inner__links__item--blue"
