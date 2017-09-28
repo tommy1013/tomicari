@@ -7,7 +7,7 @@
     margin              : 0 auto;
     float               : left;
     &__item{
-      padding         : 16px;
+      padding         : 36px;
       background-color: white;
       border          : solid 1px $copicari_back_ground_grey;
       text-align      : left;
@@ -21,7 +21,7 @@
         content       : '\f105';
         font-size     : 20px;
         position      : absolute;
-        top           : 20px;
+        top           : 40px;
         right         : 15px;
         color         : $my_page_menu_arrow_grey;
         transition    : all 500ms ease;
