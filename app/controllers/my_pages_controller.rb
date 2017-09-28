@@ -7,5 +7,6 @@ class MyPagesController < ApplicationController
   end
 
   def buy_list
+    @items = current_user.items
   end
 end
