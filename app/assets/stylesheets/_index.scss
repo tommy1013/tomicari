@@ -149,7 +149,9 @@ a {
       font-weight   : 600;
     }
     &__tax{
+      display       : inline-block;
       font-size     : 10px;
+      font-weight   : 600;
     }
     &__like_box{
       float         : right;

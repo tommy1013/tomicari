@@ -130,6 +130,10 @@
         color: $default_font_color;
       }
     }
+    &__boby__tax{
+      height: 20px;
+      font-size: 24px;
+    }
     &__content{
       background-color: $copicari_back_ground_grey;
       width:705px;
@@ -139,19 +143,5 @@
         width: 217px;
       }
     }
-  }
-}
-.follow_btn{
-  padding            : 5px 0px;
-  background-color   : white;
-  border             : solid 1px $copicari_blue;
-  border-radius      : 50px;
-  color              : $copicari_blue;
-  font-size          : 16px;
-  font-weight        : 600;
-  cursor             : pointer;
-  &--stop{
-    color              : white;
-    background-color   : $copicari_blue;
   }
 }
