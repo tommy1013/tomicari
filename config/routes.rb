@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   }
   root          'items#index'
   resources :users
-  resources :items
+  resources :items do
+    member do
+      get  'buy'
+      post 'buy_finish'
+    end
+  end
   resources :trades
   resources :my_pages do
     collection do

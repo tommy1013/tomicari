@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170916062325) do
+ActiveRecord::Schema.define(version: 20170915034721) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id",                  null: false
@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 20170916062325) do
     t.text     "body",           limit: 65535
     t.integer  "price",                        null: false
     t.integer  "user_id"
+    t.integer  "evaluate_price"
+    t.integer  "buy"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.integer  "evaluate_price"
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
