@@ -5,6 +5,8 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.text      :body
       t.integer   :price, null:false
       t.integer   :user_id
+      t.integer   :evaluate_price
+      t.integer   :buy
 
       t.timestamps
     end

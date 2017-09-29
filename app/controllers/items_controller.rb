@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: %i[edit show update]
+  before_action :set_item, only: %i[edit show update buy buy_finish]
   def index
     @items = Item.all
   end
@@ -29,6 +29,13 @@ class ItemsController < ApplicationController
   def update
     @item.update(item_edit_params)
     redirect_to root_path
+  end
+
+  def buy
+  end
+
+  def buy_finish
+    @item.update(buy: 1)
   end
 
   private
