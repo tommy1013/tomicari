@@ -37,11 +37,11 @@
       .item__price__box
         .item__description= simple_format br @item.body
         .item__price__sub
-          .item__price__price__head 評価価格
+          .item__price__price__head
           .item__price__price__center
             .item__price__price
-              = @item.evaluate_price
-              %span円
+              = @item.price
+              %span  円
               / =f.select :evaluate_price, [["---", "---"], [1, 1], [10, 10], [100, 10], [500, 500], [1000, 1000], [5000, 5000], [10000, 10000]] ,{class: "sell_form__input sell_form__input--select"}
           .item__price__price__bottom
             .item__price__tax   (税 ¥0)
