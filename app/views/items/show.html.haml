@@ -22,6 +22,12 @@
             %th 出品者
             %td #{@item.user.family_name} #{@item.user.name}
           %tr
+            %th カテゴリー
+            %td #{@item.category}
+          %tr
+            %th 商品の状態
+            %td #{@item.state}
+          %tr
             %th 配送料の負担
             %td #{@item.trade.fee_type}
           %tr

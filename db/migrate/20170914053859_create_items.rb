@@ -7,6 +7,8 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.integer   :user_id
       t.integer   :evaluate_price
       t.integer   :buy
+      t.string    :category
+      t.string    :state
 
       t.timestamps
     end

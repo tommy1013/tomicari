@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20170915034721) do
     t.integer  "user_id"
     t.integer  "evaluate_price"
     t.integer  "buy"
+    t.string   "category"
+    t.string   "state"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end

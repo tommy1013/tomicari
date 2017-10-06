@@ -30,6 +30,19 @@
               = f.text_area :body, placeholder: "商品名（必須 商品の説明）", class: "sell_form__input sell_form__item_description"
 
         .sell_form__inner
+          .sell_form__inner__container.clearfix
+            %p.sell_form__info_head 商品の詳細
+            .sell_form__inner__container--right
+              .sell_form__inner__container__sub_container
+                %p.sell_form__label カテゴリー
+                %i.form__field__must_info 必須
+                =f.select :category, [["---", "---"], ["レディース", "レディース"], ["メンズ", "メンズ"], ["ベビー・キッズ", "ベビー・キッズ"], ["インテリア・住まい・小物", "インテリア・住まい・小物"], ["エンタメ・ホビー", "エンタメ・ホビー"], ["コスメ・香水・美容", "コスメ・香水・美容"], ["家電・スマホ・カメラ", "家電・スマホ・カメラ"], ["スポーツ・レンジャー", "スポーツ・レンジャー"], ["ハンドメイド", "ハンドメイド"], ["チケット", "チケット"], ["自転車・オートバイ", "オートバイ"], ["その他", "その他"]]
+              .sell_form__inner__container__sub_container--has_margin
+                %p.sell_form__label 商品の状態
+                %i.form__field__must_info 必須
+                =f.select :state, [["---", "---"], ["新品・未使用", "新品・未使用"], ["未使用に近い", "未使用に近い"], ["目立った傷や汚れはなし", "目立った傷や汚れはなし"], ["やや傷や汚れあり", "やや傷や汚れあり"], ["傷や汚れあり", "傷や汚れあり"], ["全体的に状態が悪い", "全体的に状態が悪い"]] ,{class: "sell_form__price_form"}
+
+        .sell_form__inner
         = f.fields_for :trade do |pp|
           .sell_form__inner__container.clearfix
             %p.sell_form__info_head 配送について
@@ -37,7 +50,7 @@
               .sell_form__inner__container__sub_container
                 %p.sell_form__label 配送量の負担
                 %i.form__field__must_info 必須
-                / =pp.label :fee_type, class: "item_description"
+                =pp.label :fee_type, class: "item_description"
                 =pp.select :fee_type, [["---", "---"], ["送料込み(出品者負担)", "送料込み(出品者負担)"], ["着払い", "着払い"]]
               .sell_form__inner__container__sub_container--has_margin
                 %p.sell_form__label 配送の方法
