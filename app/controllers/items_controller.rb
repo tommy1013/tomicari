@@ -41,13 +41,13 @@ class ItemsController < ApplicationController
   private
 
     def item_params
-      param = params.require(:item).permit(:name, :body, :price, item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area]).merge(user_id: current_user.id, evaluate_price: 0)
+      param = params.require(:item).permit(:name, :body, :price, :category, :state, item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area]).merge(user_id: current_user.id, evaluate_price: 0)
       param["item_images_attributes"].delete_if{ |a| a == nil }
       return param
     end
 
     def item_edit_params
-      params.require(:item).permit(:name, :body, :price, item_attributes: [:item_id], item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area, :item_id, :id]).merge(user_id: current_user.id, evaluate_price: 0)
+      params.require(:item).permit(:name, :body, :price, :category, :state, item_attributes: [:item_id], item_images_attributes: [:image], trade_attributes: [:trade_type, :days, :fee_type, :area, :item_id, :id]).merge(user_id: current_user.id, evaluate_price: 0)
     end
 
     def set_item
