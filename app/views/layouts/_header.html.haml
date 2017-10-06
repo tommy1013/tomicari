@@ -9,7 +9,35 @@
         %i.fa.fa-search
     .header__inner__links.clearfix
       %ul.header__inner__links__left
-        %li.header__inner__links__item カテゴリー
+        %ul#menu
+          %li
+            カテゴリー
+            %ul.child
+              %li
+                %a{:href => "#"} レディース
+              %li
+                %a{:href => "#"} メンズ
+              %li
+                %a{:href => "#"} ベビー・キッズ
+              %li
+                %a{:href => "#"} インテリア・住まい・小物
+              %li
+                %a{:href => "#"} エンタメ・ホビー
+              %li
+                %a{:href => "#"} コスメ・香水・美容
+              %li
+                %a{:href => "#"} 家電・スマホ・カメラ
+              %li
+                %a{:href => "#"} スポーツ・レンジャー
+              %li
+                %a{:href => "#"} ハンドメイド
+              %li
+                %a{:href => "#"} チケット
+              %li
+                %a{:href => "#"} 自転車・オートバイ
+              %li
+                %a{:href => "#"} その他
+
       %ul.header__inner__links__right
         - if user_signed_in?
           = link_to "マイページ", my_pages_path, class: "header__inner__links__item--blue"
