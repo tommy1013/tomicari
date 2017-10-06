@@ -79,6 +79,7 @@ a {
 .section_title{
   font-size       : 28px;
   font-weight     : bold;
+  background-color: white;
 }
 
 .category_name{
@@ -164,6 +165,95 @@ a {
       }
     }
   }
+}
+
+.top_introduce{
+  text-align        :center;
+  &__box{
+    display: inline-block;
+    width: 30%;
+    margin: 16px 3.3% 0 0;
+    vertical-align: top;
+    // background-color  :white;
+    float             : left;
+
+    &__title{
+      margin-bottom: 2px;
+      &__character{
+        // font-size: 1.17em;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      &__number{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 8px 0 0;
+        border-radius: 50%;
+        background: #ea352d;
+        text-align: center;
+        line-height: 40px;
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+    &__image{
+      width : 100%;
+      margin :16px 0 0;
+      &__img{
+        width         : 300px;
+        height        : 300px;
+      }
+    }
+    &__introduce{
+      font-size: 20px;
+    }
+  }
+}
+
+.front_image2{
+  @include back_ground_image_with_blur("front2.jpg", 390px);
+    height        : 400px;
+    width         : 100%;
+    color         : white;
+    text-align    : center;
+    background-color: #38AEF0;
+    z-index       :10;
+    font-size     : 30px;
+    text-align: center;
+  }
+
+.front_image3{
+  @include back_ground_image_with_blur("hawks.jpg", 390px);
+    height        : 400px;
+    width         : 100%;
+    color         : white;
+    text-align    : center;
+    background-color: #38AEF0;
+    z-index       :10;
+    font-size     : 30px;
+    text-align: center;
+    &__stores{
+      margin-top  : 16px;
+      &__image{
+        width     : 170px;
+        float     : left;
+        cursor    : pointer;
+        &--right{
+          margin-left : 10px;
+        }
+        &:hover{
+          opacity     : 0.4;
+        }
+      }
+    }
+  }
+.front_image__phone_image2{
+  position  : absolute;
+  bottom    : -2105px;
+  right     : 120px;
+  height    : 400px;
+  z-index   :11;
 }
 
 .hidden{
