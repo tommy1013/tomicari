@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: %i[edit show update buy buy_finish]
+  before_action :set_item, only: [:edit, :show, :update, :buy, :buy_finish]
+
   def index
     @items = Item.all
   end
@@ -36,6 +37,9 @@ class ItemsController < ApplicationController
 
   def buy_finish
     @item.update(buy: 1)
+  end
+
+  def shooting
   end
 
   private

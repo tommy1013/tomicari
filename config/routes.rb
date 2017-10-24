@@ -4,7 +4,12 @@ Rails.application.routes.draw do
  :registrations => 'users/registrations'
   }
   root          'items#index'
-  resources :users
+  resources :users do
+    collection do
+      get  'shooting'
+    end
+  end
+
   resources :items do
     member do
       get  'buy'
