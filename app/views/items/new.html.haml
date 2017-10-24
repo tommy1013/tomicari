@@ -50,7 +50,6 @@
               .sell_form__inner__container__sub_container
                 %p.sell_form__label 配送量の負担
                 %i.form__field__must_info 必須
-                =pp.label :fee_type, class: "item_description"
                 =pp.select :fee_type, [["---", "---"], ["送料込み(出品者負担)", "送料込み(出品者負担)"], ["着払い", "着払い"]]
               .sell_form__inner__container__sub_container--has_margin
                 %p.sell_form__label 配送の方法

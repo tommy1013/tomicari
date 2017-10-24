@@ -11,41 +11,41 @@
             = f.label "ニックネーム", class: "form__field__label"
             %i.form__field__must_info 必須
             %br
-              = f.text_field :nickname, class: "form__field__form",placeholder: "例)おやおや"
+              = f.text_field :nickname, class: "form__field__form",placeholder: "例)コピ太郎"
 
           .form__field
             = f.label "メールアドレス", class: "form__field__label"
             %i.form__field__must_info 必須
             %br
-              = f.email_field :email, class: "form__field__form",placeholder: "例)oyanagi@gmail.com"
+              = f.email_field :email, class: "form__field__form",placeholder: "例)copycari@gmail.com"
 
           .form__field
             = f.label "パスワード", class: "form__field__label"
             %i.form__field__must_info 必須
             %br
-              = f.password_field :password, class: "form__field__form", autocomplete: "off" ,placeholder: "小柳以上"
+              = f.password_field :password, class: "form__field__form", autocomplete: "off" ,placeholder: "6文字以上"
 
           .form__field
             = f.label "パスワード(確認)", class: "form__field__label"
             %i.form__field__must_info 必須
             %br
-              = f.password_field :password, class: "form__field__form", autocomplete: "off" ,placeholder: "小柳以上"
+              = f.password_field :password, class: "form__field__form", autocomplete: "off" ,placeholder: "6文字以上"
 
           .form__field
             = f.label "お名前", class: "form__field__label"
             %i.form__field__must_info 必須
             %br
-              = f.text_field :family_name, class: "form__field__form",placeholder: "例)小柳"
+              = f.text_field :family_name, class: "form__field__form",placeholder: "例)コピカリ"
 
-              = f.text_field :name, class: "form__field__form",placeholder: "例)颯人"
+              = f.text_field :name, class: "form__field__form",placeholder: "例)太郎"
 
           .form__field
             = f.label "お名前 カナ", class: "form__field__label"
             %i.form__field__must_info 必須
             %br
-              = f.text_field :family_name_kana, class: "form__field__form",placeholder: "例)オヤナギ"
+              = f.text_field :family_name_kana, class: "form__field__form",placeholder: "例)コピカリ"
 
-              = f.text_field :name_kana, class: "form__field__form",placeholder: "例)ハヤト"
+              = f.text_field :name_kana, class: "form__field__form",placeholder: "例)タロウ"
 
 
           .form__field
@@ -76,7 +76,7 @@
             = f.label "建物名", class: "form__field__label"
             %i.form__field__optional_info 任意
             %br
-              = f.text_field :building_name, class: "form__field__form",placeholder: "例)小柳ビル"
+              = f.text_field :building_name, class: "form__field__form",placeholder: "例)コピカリビル"
 
           .form__field
             = f.label "電話番号", class: "form__field__label"
