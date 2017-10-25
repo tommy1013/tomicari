@@ -203,22 +203,9 @@ class DanmakuStgEndScene extends Scene {
     constructor(renderingTarget) {
         super('クリア', 'black', renderingTarget);
         const text = new TextLabel(10, 200, "おめでとう！20%OFF！");
-        // var text2 = new TextLabel(120, 250, "click");
         this.add(text);
-        // this.add(text2);
-        // $.ajax({
-        //   type: 'GET',
-        //   url: 'https://www.ajaxtower.jp/js/var/index2.html',
-        //   dataType: 'json',
-        // })
-        // var linkContent = text2('https://www.ajaxtower.jp/js/var/index2.html');
-        // window.location.href = 'http://js.studio-kingdom.com/jquery/events/click';
     }
 }
-
-// $(text2).on('click', function(){
-//     console.log("test");
-//   });
 
 class DanmakuStgGameOverScene extends Scene {
     constructor(renderingTarget) {
