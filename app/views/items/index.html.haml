@@ -3,7 +3,9 @@
 
   .front_image#front_image
     .front_image__conamibutton.hidden
-      =link_to 'push', '/users/shooting'
+      -if user_signed_in?
+        =link_to 'push', shooting_user_path(current_user)
+
     .front_image__left_box.front_image_item
       %h1
         スマホでかんたん

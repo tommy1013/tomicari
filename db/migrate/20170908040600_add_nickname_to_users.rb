@@ -14,6 +14,7 @@ class AddNicknameToUsers < ActiveRecord::Migration[5.0]
     add_column :users, :card_number,       :integer, null: false
     add_column :users, :expiration_number, :integer
     add_column :users, :security_code,     :integer, null: false
+    add_column :users, :clear,             :integer
   end
 end
 

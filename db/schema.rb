@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20170915034721) do
     t.integer  "card_number",                         null: false
     t.integer  "expiration_number"
     t.integer  "security_code",                       null: false
+    t.integer  "clear"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
