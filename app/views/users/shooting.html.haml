@@ -1,4 +1,7 @@
 .shooting.hidden
-  = link_to "HOMEボタン", root_path , class: "shooting__btn"
+  = link_to "HOMEボタン", shooting_end_user_path(@user), method: :post, class: "shooting__btn"
 = javascript_include_tag "engine.js"
 = javascript_include_tag "danmaku.js"
+
+
+/ = link_to "購入する", buy_finish_item_path(@item), method: :post,class: "item_info__buy_btn"

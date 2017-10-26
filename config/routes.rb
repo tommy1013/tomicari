@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   }
   root          'items#index'
   resources :users do
-    collection do
-      get 'shooting'
+    member do
+      get  'shooting'
+
+      post 'shooting_end'
     end
   end
 
